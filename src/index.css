@@ -1,0 +1,74 @@
+.icon {
+  width: 3rem;
+  height: 3rem;
+  background-color: transparent !important;
+}
+
+#choose-folder {
+  border: 3px dashed #ccc;
+  border-radius: 25px;
+  height: 50vh;
+  position: relative;
+}
+
+#choose-folder p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#choose-folder.drop {
+  border-style: solid;
+}
+
+#loading-div {
+  display: flex;
+}
+
+#audio-chart-container {
+  width: 75%;
+  height: 20%;
+}
+
+.textbox-highlightable:hover {
+  pointer-events: none;
+}
+
+mark {
+  background-color: rgb(255 0 0 / 66%);
+  border-radius: .25rem;
+  padding: 0;
+  margin-left: 1px;
+  margin-right: -1px;
+  color: transparent;
+  z-index: 2;
+}
+
+.backdrop {
+  position: absolute;
+  z-index: 1;
+  background-color: #fff;
+  overflow: hidden;
+  pointer-events: none;
+  width: 100%;
+  display: block;
+  top: 0;
+  transform: translateY(-50%);
+  border-radius: .25rem;
+}
+
+.highlights {
+  white-space: nowrap;
+  color: transparent;
+  padding: .75rem 1rem;
+}
+
+.highlight-text {
+  position: absolute;
+  top: 0%;
+  transform: translateY(-50%);
+  width: 100%;
+  background-color: transparent !important;
+  z-index: 1;
+}
