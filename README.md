@@ -8,7 +8,7 @@ Specficically, it was designed to make datasets for [Tacotron 2](https://github.
 
 ## Download
 
-TODO: Put download links here
+You can always download the latest version from the [Releases Tab](https://github.com/underscoren/transcribetool/releases)
 
 ## Usage
 
@@ -56,6 +56,7 @@ The app will build into the `out` folder, usually as both the application files 
   - Automatic detection when audio files are changed
   - Editing/Auto-fixing/Deleting audio clips
   - Custom export location
+  - Icons
 
 ## License
 
