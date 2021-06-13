@@ -1,7 +1,7 @@
 {
   "name": "transcribetool",
   "productName": "TranscribeTool",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "My Electron application description",
   "main": "src/index.js",
   "scripts": {
@@ -24,8 +24,8 @@
           "name": "@electron-forge/maker-squirrel",
           "config": {
             "name": "TranscribeTool",
-            "setupIcon": "./assets/winicon.ico",
-            "iconUrl": "https://raw.githubusercontent.com/underscoren/transcribetool/master/assets/winicon.ico"
+            "setupIcon": "./assets/icon.ico",
+            "iconUrl": "https://raw.githubusercontent.com/underscoren/transcribetool/master/assets/icon.ico"
           }
         },
         {

@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain } = require('electron');
+const { app, BrowserWindow, ipcMain, Menu } = require('electron');
 
 const path = require('path');
 const fs = require("fs");
@@ -19,13 +19,15 @@ const createWindow = () => {
       nodeIntegration: true,
       contextIsolation: false,
       spellcheck: true,
+      enableRemoteModule: true,
+      devTools: true,
     }
   });
 
   mainWindow.removeMenu();
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
 
-  if(!app.isPackaged) // assume we are in development if app is not packaged
+  if(!app.isPackaged || process.argv.includes("--debug")) // assume we are in development if app is not packaged
     mainWindow.webContents.openDevTools();
   
   mainWindow.webContents.on('context-menu', (event, params) => {

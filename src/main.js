@@ -1,7 +1,14 @@
-const { ipcRenderer } = require('electron');
+const { ipcRenderer, remote } = require('electron');
 const $ = jQuery = require("./jquery-3.6.0.min.js");
 const bootstrap = require("./bootstrap.bundle.min.js");
 const Chart = require("./chart.min.js");
+
+
+const currentWebContents = remote.getCurrentWebContents();
+document.addEventListener('keyup', ({ key, ctrlKey, shiftKey, metaKey, altKey }) => {
+    if (key === 'F12' || (ctrlKey && shiftKey && key === 'I') || (metaKey && altKey && key === 'i')) // F12 / Ctr+Shift+I / Cmd+Alt+I for mac
+        currentWebContents.openDevTools();
+});
 
 // drag and drop handlers
 document.addEventListener('drop', (event) => {
